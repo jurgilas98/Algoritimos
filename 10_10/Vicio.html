@@ -1,0 +1,31 @@
+<meta charset="UTF-8">
+
+<script>
+    var vicio = Number (prompt('Qual o seu vício ? 1- Cigarro /2- Alcool /3- Maconha /4-Drogas mais pesadas'));
+    var valor;
+    var tempo;
+
+    switch (vicio){
+        case 1: 
+        valor = 'R$15.000';
+        tempo = '10';
+        break;
+        case 2: 
+        valor = 'R$20.000';
+        tempo = '15';
+        break;
+        case 3: 
+        valor = 'R$25.000';
+        tempo = '18';
+        break;
+        default:
+        valor = 'R$35.000';
+        tempo = '20';
+                
+    }
+
+
+
+
+Alert(`Você vai acabar gastando ${valor} para se tratar e mesmo assim veverá ${tempo} anos a menos.`)  
+</script>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculadora Calórica</title>
+</head>
+<body>
+    Nº de Beijos : <input id = "beijos"><br><br>
+    Nº de Horas de Malhação : <input id = "horas"><br><br><br><br>
+    <button onclick="calorificar()">Descobrir perda Calórica</button><br><br><br><br>
+
+    <h2>Calorias perdidas hoje</h2>.<br><br>
+    <b>Beijos :</b><span id = "beijos"></span> Calorias: 20 x <span id = "beijos1"></span> = <b id = "calb"></b>.<br><br>
+    <b>Malhação :</b><span id="horas"></span> Calorias: 150 x <span id="horas1"></span> = <b id="calm"></b>.<br><br>
+    <b>Total Hoje : </b><b><u id="calt"></u></b> calorias.
+
+    <h2>Calorias perdidas nesse ritmo</h2><br><br>
+    Em <b>1 semana :</b><span id = "calt1"></span> x 7 = <b id = "calts"></b>.<br><br>
+    Em <b>1 mês :</b><span id = "calt2"></span> x 30 = <b id = "es"></b>.<br><br>
+    
+    
+    
+</body>
+</html>
+<script>
+   function calorificar(){
+       var beijos = Number (document.getElementById("beijos").value);
+       var horas = Number (document.getElementById("horas").value);
+
+       var calb = beijos * 20;
+       var calm = horas * 150;
+       var calt = calb + calm;
+       var calts = calt * 7;
+       var mes = calt * 30;
+     
+document.getElementById("beijos").innerHTML = beijos;
+document.getElementById("beijos1").innerHTML = beijos;
+document.getElementById("horas").innerHTML = horas;
+document.getElementById("horas1").innerHTML = horas;
+document.getElementById("calb").innerHTML = calb;
+document.getElementById("calm").innerHTML = calm;
+document.getElementById("calt").innerHTML = calt;
+document.getElementById("calt1").innerHTML = calm;
+document.getElementById("calt2").innerHTML = calm;
+document.getElementById("calts").innerHTML = calts;
+document.getElementById("es").innerHTML = mes;
+
+
+
+
+
+   }
+
+
+
+
+
+</script>

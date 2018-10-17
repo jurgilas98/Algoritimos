@@ -1,0 +1,41 @@
+
+    <meta charset="UTF-8">
+   
+<script>
+    alert('1- Zé Ruela/ 2- Taylor Swift/ NDA- Nulo');
+    var candidato1 = 0;
+    var candidato2 = 0;
+    var voto = Number (prompt('Vote no seu candidato 1/3'));
+    switch(voto){
+        case 1:
+         candidato1 = candidato1++;
+        break;
+        case 2:
+         candidato2 = candidato2++;
+    }
+    var voto2 = Number (prompt('Vote no seu candidato 2/3'));
+    switch(voto){
+        case 1:
+        candidato1++;
+        break;
+        case 2:
+        candidato2++;
+        break;
+        }
+    var voto3 = Number (prompt('Vote no seu candidato 3/3'));
+    switch(voto){
+        case 1:
+        candidato1++;
+        break;
+        case 2:
+        candidato2++;
+        break;
+        }
+
+if (candidato1 == candidato2){
+    alert ('Empate');
+} else {
+    var vencedor = candidato1 > candidato2 ? 'Zé Ruela' : 'Taylor Swift';
+    alert(`O candidato ${vencedor} venceu`);
+}
+</script>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>KLB</title>
+</head>
+<body>
+    Valor maximo da pizza por pessoa : <input id = "valor"><br><br>
+    Valor da pizza: <input id = "pizza"><br><br><br>
+    <button onclick="dividir()"><i>Calcular divisão da conta</i></button><br><br>
+
+    <div id = "resultado" style="display: none">
+            A pizza pode ser comprada e a contribuição de cada será de <b>R$</b><b id = "div"></b>.
+
+    </div>
+
+    <div id = "resultado1" style="display: none">
+            Deu ruim! A pizza custa mais que o valor que o KLB pode pagar!
+
+    </div>
+
+
+
+    
+</body>
+</html>
+<script >
+        function dividir() {
+
+            var valor = Number  (document.getElementById("valor").value);
+            var pizza = Number  (document.getElementById("pizza").value);
+            var total = (valor * 3);
+            var sobra = (total - pizza);
+            var div = (pizza / 3);
+
+            if (sobra >= 0) {
+
+                document.getElementById("div").innerHTML = div.toFixed(2);
+                document.getElementById("resultado").style.display = "block";
+
+
+
+            } else {
+
+                document.getElementById("resultado1").style.display = "block";
+
+
+            }
+
+
+        }
+
+
+
+</script>

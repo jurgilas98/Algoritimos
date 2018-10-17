@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exibir e ocultar</title>
+</head>
+<body>
+    <h2>Exibindo e ocultando partes da página</h2>
+
+    <!-- Para ter partes que possam ser exibidas e escondidas -->
+    <!-- Normalmente usamos tags como DIV, P SPAN -->
+
+    <!-- Exemplo de div que fica oculta (invisivel) -->
+
+    <div id="div_bilete" style="display: none">
+
+            Amanhã não terá aula. <br>
+            É verdade esse bilete.
+
+    </div>
+
+    <button onclick="exibirBilete()">Exibir bilete</button>
+</body>
+</html>
+
+<script>
+    function exibirBilete(){
+    // Para alterar a exibição de um elemento
+    // Alteramos seu style
+    // Para tornar um elemento visível, os valores podem ser : "block", "table", "inherit", dentre outros...
+
+    document.getElementById("div_bilete").style.display='block';
+    }
+
+ </script>

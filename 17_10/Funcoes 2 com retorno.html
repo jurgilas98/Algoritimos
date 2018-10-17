@@ -1,0 +1,21 @@
+<meta charset="UTF-8">
+<script>
+/*
+    Pergunte ao usuário, quantos filhos ele tem.
+    Calcule então sua bolsa familia.
+    Considere que a bolsa é de R$ 20,00 por filho.
+*/
+function bolsaFamilia(filhos){
+    if (filhos < 0){
+        return 0; //Linha com return "mata", finaliza a função 
+    }
+    var bolsa = filhos * 20;
+    return bolsa;
+}
+
+var numero_filhos = Number (prompt('Quantos filhos ?'));
+//invocando a função
+var bolsa_calculada = bolsaFamilia(numero_filhos);
+
+alert(`Sua bolsa familia será de ${bolsa_calculada} reais`)
+</script>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    Nome: <input id="nome"><br>
+    Idade: <input id="idade"><br>
+    <br>
+    <button onclick="Cumprimentar()">Cumprimentar</button>
+
+    <br><br>
+
+    <div id = "exibir_div" style = "display:none">
+        Bem vindo(a), <b id="exibir_nome"></b>
+        <span id="exibir_mensagem_especial" style="display:none" >
+            É uma honra receber alguem da <i><b>melhor idade!</b></i>
+
+        </span>
+    </div>
+
+</body>
+</html>
+
+<script>
+    function Cumprimentar(){
+
+        var nome = document.getElementById("nome").value;
+        var idade = document.getElementById("idade").value;
+
+        document.getElementById("exibir_nome").innerHTML = nome;
+
+        document.getElementById("exibir_div").style.display = 'block';
+
+        if(idade >=60){
+
+            document.getElementById("exibir_mensagem_especial").style.display = 'block';
+        }
+
+    }
+</script>

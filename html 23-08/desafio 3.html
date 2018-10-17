@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Comparação entre dois bairros</title>
+</head>
+<body>
+    <h2>Comparando 2 bairros de São Paulo/SP</h2>
+    <b>Bairro 1:</b><span id = "bairro1" style="color:goldenrod"></span><br>
+    <b>População:</b><span id = "populacao1" style="color:goldenrod"></span> <b>Habitantes</b><br>
+    <b>Principal Característic:</b><span id = "caracteristica1" style="color:goldenrod"></span><br>
+
+    <b>Bairro 2:</b><span id = "bairro2" style="color:fuchsia"></span><br>
+    <b>População:</b><span id = "populacao2" style="color:fuchsia"></span><b> Habitantes</b><br>
+    <b>Principal Característic:</b><span id = "caracteristica2" style="color:fuchsia"></span><br>
+</body>
+</html>
+
+<script>
+
+var bairro_1 = prompt ('Defina o nome do 1º bairro');
+var hab_1 = prompt ('Defina o número de habitantes do bairro');
+var carac_1 = prompt ('Defina o bairro em uma frase');
+
+var bairro_2 = prompt ('Defina o nome do 2º bairro');
+var hab_2 = prompt ('Defina o número de habitantes do bairro');
+var carac_2 = prompt ('Defina o bairro em uma frase');
+
+document.getElementById("bairro1").innerHTML = bairro_1;
+document.getElementById("populacao1").innerHTML = hab_1;
+document.getElementById("caracteristica1").innerHTML = carac_1;
+
+document.getElementById("bairro2").innerHTML = bairro_2;
+document.getElementById("populacao2").innerHTML = hab_2;
+document.getElementById("caracteristica2").innerHTML = carac_2;
+
+
+</script>

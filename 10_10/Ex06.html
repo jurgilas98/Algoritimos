@@ -1,0 +1,31 @@
+<meta charset="UTF-8">
+<script>
+    var frutas = Number (prompt('Quantas fruntas terá na salada ?'));
+    var minimo = frutas < 3;
+    var valor;
+
+    if (minimo){
+        alert('Salada de frutas fake! Tente novamente ');
+    } else {
+        switch (frutas) {
+            case 3:
+            valor = 5;
+            break;
+            case 4:
+            valor = 10;
+            break;            
+            default:
+            valor = 12;     
+            
+            
+        }
+        var valor_final = valor + (frutas * 1.50);     
+     alert(`Uma salada com ${frutas} frutas deve ser vendida por R$${valor_final}`)
+    }
+
+
+
+
+
+</script>
+   

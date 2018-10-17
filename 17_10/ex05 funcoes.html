@@ -1,0 +1,31 @@
+<meta charset="UTF-8">
+<script>
+    var salario = Number (prompt('Qual o salario ?'));
+    var val_inss = inss(salario);
+    var val_ir = ir(salario)
+    var val_vt = vt(salario)
+    function inss(salario){
+        
+    var inss = salario<=1000? salario * 0.08 : salario * 0.1;
+        return inss;
+    }
+    function ir(salario){
+        if (salario < 1000){
+            return 0 ;
+        }else if (ir > 1000 && ir < 2000){
+            var ir = salario * 0.07;
+            return ir;
+        }
+        var ir = salario * 0.15;
+        return ir;
+
+    }
+    function vt(salario){
+        var vt = salario * 0.05;
+        return vt;
+    }
+    alert (`INSS =R$${val_inss} IR =R$${val_ir} VT =R$${val_vt} `);
+
+
+
+</script>

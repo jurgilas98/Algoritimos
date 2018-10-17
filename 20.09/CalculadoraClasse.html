@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculadora</title>
+</head>
+<body>
+
+    Salário da Família: <input id = 'salario'><br>
+
+    <br>
+
+    Quantidade de pessoas na família: <input id = 'quantidade'><br>
+
+    <br>
+
+    <button onclick='Calcular()'>Verificar classe social</button>
+
+    <br><br>
+
+    <div id = 'exibirResultado' style = 'display:none'>
+
+        A renda média é de <b>R$</b><b id='exibirSalario'></b>. Sua família está
+            na classe <b id = 'exibirClasse'></b> e faz parte de <b id = 'exibirPorcento'></b>% da população.
+            
+            
+
+
+    </div>
+    
+</body>
+</html>
+
+<script>
+    
+    function Calcular(){
+
+        var salario = Number(document.getElementById('salario').value);
+        var quantidadePessoas = Number(document.getElementById('quantidade').value);
+
+        var mediaSalario = salario/quantidadePessoas;
+
+        var classe;
+        var porcento;
+
+
+        if(276.7 < mediaSalario && mediaSalario <= 484.97){
+
+            classe = 'E';
+            porcento = '3';
+
+        }
+
+        else if(484.97 < mediaSalario && mediaSalario <= 726.26){
+
+            classe = 'D';
+            porcento = '25';
+
+        }
+
+        else if(726.26 < mediaSalario && mediaSalario <= 1194.53){
+
+            classe = 'C2';
+            porcento = '22';
+
+        }
+
+        else if(1194.53 < mediaSalario && mediaSalario <= 2012.67){
+
+            classe = 'C1';
+            porcento = '21';
+
+        }
+
+        else if(2012.67 < mediaSalario && mediaSalario <= 3479.36){
+
+            classe = 'B2';
+            porcento = '15';
+
+        }
+        
+        else if(3479.36 < mediaSalario && mediaSalario <= 6563.73){
+
+            classe = 'B1';
+            porcento = '9';
+
+        }
+
+        else if(6563.73 < mediaSalario && mediaSalario <= 9733.47){
+
+            classe = 'A2';
+            porcento = '4';
+
+        }
+
+        else if(mediaSalario >= 9733.47){
+
+            classe = 'A1';
+            porcento = '1';
+
+        }
+
+
+        document.getElementById('exibirSalario').innerHTML = mediaSalario;
+        document.getElementById('exibirClasse').innerHTML = classe;
+        document.getElementById('exibirPorcento').innerHTML = porcento;
+
+        document.getElementById('exibirResultado').style.display = 'block';
+
+        
+    }
+
+</script>

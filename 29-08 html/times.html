@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Times</title>
+</head>
+<body>
+    <h1>Times</h1>
+    <h3>Defina o time em uma frase</h3> <br>
+    Corinthians <input id = "corinthians"> <br><br>
+    Palmeiras <input id = "palmeiras"><br><br>
+    São Paulo <input id="sao_paulo"><br><br>
+    Santos <input id="santos"> <br><br>
+    <button onclick="gerar()">Gerar</button><br><br>
+
+    <ul>
+        <li><b>Corinthians: </b><i id = "corinthians1"></i></li>
+        <li><b>Palmeiras: </b><i id = "palmeiras1"></i></li>
+        <li><b>São Paulo: </b><i id="sao_paulo1"></i></li>
+        <li><b>Santos: </b><i id="santos1"></i></li>
+    </ul>
+    
+</body>
+</html>
+<script>
+        function gerar (){
+            var corinthians = document.getElementById("corinthians").value;
+            var palmeiras = document.getElementById("palmeiras").value;
+            var sao_paulo = document.getElementById("sao_paulo").value;
+            var santos = document.getElementById("santos").value;
+
+            document.getElementById("corinthians1").innerHTML = corinthians;
+            document.getElementById("palmeiras1").innerHTML = palmeiras;
+            document.getElementById("sao_paulo1").innerHTML = sao_paulo;
+            document.getElementById("santos1").innerHTML = santos;
+
+
+        }
+
+
+
+</script>

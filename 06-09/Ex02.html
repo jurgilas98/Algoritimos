@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Restaurante</title>
+</head>
+<body>
+    <h2 >Mercado Eta do Agreste</h2>
+1º Produto:<input id="produto1"> Valor Unitário:<input id="valor1">Quantidade:<input id="quantidade1"><br><br>   
+2º Produto:<input id="produto2"> Valor Unitário:<input id="valor2">Quantidade:<input id="quantidade2"><br><br>  
+3º Produto:<input id="produto3"> Valor Unitário:<input id="valor3">Quantidade:<input id="quantidade3"><br><br>    
+4º Produto:<input id="produto4"> Valor Unitário:<input id="valor4">Quantidade:<input id="quantidade4"><br><br><br>
+<button onclick="fechar()">Calcular Conta</button><br><br><br>
+
+<ol><h2>Conta Fechada</h2>
+<li><span id="produtos1"></span>. R$<span id="valor1"></span> x <span id="quantidade1"></span> - <b id="total1"></b></li>
+<li><span id="produtos2"></span>. R$<span id="valor2"></span> x <span id="quantidade2"></span> - <b id="total2"></b></li>
+<li><span id="produtos3"></span>. R$<span id="valor3"></span> x <span id="quantidade3"></span> - <b id="total3"></b></li>
+<li><span id="produtos4"></span>. R$<span id="valor4"></span> x <span id="quantidade4"></span> - <b id="total4"></b></li>
+<b>Total: <u id="soma"></u></b>
+</ol>
+</body>
+</html>
+<script>
+   function fechar(){
+       var produto1 = (document.getElementById("produto1").value);
+       var produto2 = (document.getElementById("produto2").value);
+       var produto3 = (document.getElementById("produto3").value);
+       var produto4 = (document.getElementById("produto4").value);
+       var valor1 = Number (document.getElementById("valor1").value);
+       var valor2 = Number (document.getElementById("valor2").value);
+       var valor3 = Number (document.getElementById("valor3").value);
+       var valor4 = Number (document.getElementById("valor4").value);
+       var quantidade1 = Number (document.getElementById("quantidade1").value);
+       var quantidade2 = Number (document.getElementById("quantidade2").value);      
+       var quantidade3 = Number (document.getElementById("quantidade3").value);
+       var quantidade4 = Number (document.getElementById("quantidade4").value);
+       var total1 = valor1 * quantidade1;
+       var total2 = valor2 * quantidade2;
+       var total3 = valor3 * quantidade3;
+       var total4 = valor4 * quantidade4;
+       var soma = (total1 + total2 + total3 + total4);
+
+
+document.getElementById("produtos1").innerHTML = produto1;
+document.getElementById("produtos2").innerHTML = produto2;
+document.getElementById("produtos3").innerHTML = produto3;
+document.getElementById("produtos4").innerHTML = produto4;
+document.getElementById("valor1").innerHTML = valor1;
+document.getElementById("valor2").innerHTML = valor2;
+document.getElementById("valor3").innerHTML = valor3;
+document.getElementById("valor4").innerHTML = valor4;
+document.getElementById("quantidade1").innerHTML = quantidade1;
+document.getElementById("quantidade2").innerHTML = quantidade2;
+document.getElementById("quantidade3").innerHTML = quantidade3;
+document.getElementById("quantidade4").innerHTML = quantidade4;
+document.getElementById("total1").innerHTML = total1;
+document.getElementById("total2").innerHTML = total2;
+document.getElementById("total3").innerHTML = total3;
+document.getElementById("total4").innerHTML = total4;
+document.getElementById("soma").innerHTML = soma;
+
+
+
+
+   }
+
+
+
+
+
+
+
+</script>

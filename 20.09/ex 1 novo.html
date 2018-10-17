@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <b id = 'mostrarIdade'></b>
+    
+</body>
+</html>
+
+<script>
+
+    var idade = prompt("Quantos anos você tem?");
+    var renda = prompt('Quanto seus pais ganham por mês?')
+
+    document.getElementById('mostrarIdade').
+        innerHTML = 'Você tem <u>' + idade + '</u> anos.<br>';
+
+    if(idade < 16){
+        document.writeln('<b>Mano, vai jogar playstation</b><br>')
+    }
+
+    else{
+
+        document.writeln('<b>Você já pode votar! Exerça sua cidadania!</b><br>')
+
+        if(renda < 1500){
+
+            document.writeln('<b>Você já pode assistir certos filmes no cinema, mas a grana não dá :(</b><br>');
+
+        }
+
+        else{
+
+            document.writeln('<b>Você já pode assistir certos filmes no cinema, e a mesada já te permite ir de vez em quando ;)</b><br>')
+
+        }
+    }
+
+
+</script>

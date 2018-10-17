@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Números</title>
+</head>
+<body>
+    <h2>Números com JS</h2>
+
+Número 1: <input id="numero1"> <br><br><br>
+Número 2: <input id="numero2"> <br><br><br><br>
+<button onclick="calcular()">Realizar Cálculos</button><br><br>
+
+Soma: <b id="soma"></b> <br>
+Subtração: <b id="sub"></b><br>
+Multiplicação: <b id="mult"></b><br>
+Divisão: <b id="div"></b><br>
+</body>
+</html>
+
+<script>
+  function calcular() {
+      // Recuperando valores de campo com NÚMEROS    
+      //pode ser feito com parseInt() ou parseFloat()
+    var numero1 = Number (document.getElementById("numero1").value);
+    var numero2 = Number (document.getElementById("numero2").value);
+
+        var soma1 = numero1 + numero2 ;
+        var sub1 = numero1 - numero2 ;
+        var mult1 = numero1 * numero2 ;
+        var div1 = numero1 / numero2 ;
+    
+ document.getElementById("soma").innerHTML = soma1;
+ document.getElementById("sub").innerHTML = sub1;
+ document.getElementById("mult").innerHTML = mult1;
+ document.getElementById("div").innerHTML = div1;
+
+  }
+
+
+
+
+
+</script>

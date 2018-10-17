@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Faculdade</title>
+</head>
+<body> 
+    <h2>Faculdade</h2><br>
+    Nome:<input id = "nome"><br>
+    Expectativa antes da faculdade:<input id = "expectativa"><br>
+    Média das notas:<input id="notas"><br>
+    Realidade após as provas:<input id="realidade"><br><br><br>
+
+    <button onclick="realidade ()">Mostrar realidade da faculdade</button><br><br>
+
+    <b id = "nome1"></b>, antes de entrar na faculdade tinha a expectativa de <b id = "expectativa1"></b>.<br>
+     Porém, como sua média foi de <b id="notas1"></b>, sua realidade acabou sendo que <b id = "realidade1"></b>.
+</body>
+</html>
+<script>
+        function realidade () {
+        var nome = document.getElementById("nome").value;
+        var expectativa = document.getElementById("expectativa").value;
+        var notas = document.getElementById("notas").value;
+        var realidade = document.getElementById("realidade").value;
+
+        document.getElementById("nome1").innerHTML = nome;
+        document.getElementById("expectativa1").innerHTML = expectativa;
+        document.getElementById("notas1").innerHTML = notas;
+        document.getElementById("realidade1").innerHTML = realidade;
+
+        }
+
+</script>

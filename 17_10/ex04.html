@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Funções</title>
+</head>
+<body>
+
+    <input type="text" id="identificador"><br>
+    <button onclick="mostrar()" >Mostrar</button><br>
+    <button onclick="esconder()" >Esconder</button>   
+
+
+    <div id="caixa1" style="display: none;" >Eu sou a caixa 1</div>
+    <div id="caixa2" style="display: none;" >Vem pra caixa você tambem</div>
+    <div id="caixa3" style="display: none;" >Caixa de Pandora</div>
+</body>
+</html>
+<script>
+    function mostrar(){
+        var id = document.getElementById('identificador').value;
+        alteraExibicao(id,true);
+    }
+    function esconder(){
+        var id = document.getElementById('identificador').value;
+        alteraExibicao(id,false);
+
+    }
+
+    function alteraExibicao(id,visivel){
+        // Argumento id -> Id do elemento
+        //Argumento "visivel"-> considerar boleano
+        //visivel ou não ou true ou false
+        
+        var visibilidade = visivel ? 'block':'none';
+        document.getElementById(id).style.display = visibilidade;
+    }
+
+
+
+</script>

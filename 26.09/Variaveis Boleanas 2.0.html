@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Variáveis Boleanas</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    var idade = Number (prompt('Qual sua idade ?'));
+    var sexo = prompt('Qual seu sexo (m ou f) ?');
+
+    // criandp variaveis boleanas
+    // ou seja elas guardam "verdadeiro" ou "falso"
+    // para o computador são "true" ou "false"
+
+    var menor_de_idade = idade < 18;
+    //Somente receberá "true" ou "false"
+    var mulher = sexo == "f";
+    //Somente receberá "true" ou "false"
+
+    if (menor_de_idade){
+        var idadeR = "menor";
+    } else if (!menor_de_idade){
+        var idadeR = "maior";
+    }
+    if (mulher){
+        var sexoR = "mulher";
+    } else if (!mulher) {
+        var sexoR = "homem";
+    }
+alert (`${sexoR}  ${idadeR} de idade`);
+
+</script>

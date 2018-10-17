@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pizza</title>
+</head>
+<body>
+    Valor máximo que tem para pagar numa pizza : <input id="Vmax"> <br>
+    Valor da pizza : <input id="Vpizza"> <br><br>
+
+    <button onclick = "analisar ()"><i>Dá pra pedir?</i></button><br><br><br><br>
+ 
+    <div id = "pode"style="display: none">
+  Você PODE a pizza comprar e ainda sobra <b>R$<b id="sobra"></b></b>
+    </div>
+
+    <div id="npode" style="display: none">
+A iFood vai te entregar a pizza pelo valor que você tem. <i>É verdade esse bilete.</i>
+
+    </div>
+
+</body>
+</html>
+
+<script>
+
+    function analisar () {
+    var Vmax = Number (document.getElementById("Vmax").value);
+    var Vpizza = Number (document.getElementById("Vpizza").value);
+    var sobra = (Vmax - Vpizza);
+
+     
+     if (sobra >= 0 ) {
+         document.getElementById("pode").style.display = "block"; 
+         document.getElementById("sobra").innerHTML = sobra; 
+             
+
+     } else {
+        document.getElementById("npode").style.display = "block"; 
+
+     }
+}
+
+
+</script>

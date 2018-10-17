@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Números arredondados e truncados</title>
+</head>
+<body>
+        <h2>Números Arredondados e Truncados</h2>
+
+        Número 1: <input id="nota1"> <br><br><br>
+        Número 2: <input id="nota2"> <br><br><br><br>
+        <button onclick="calcular()">Calcular Média</button><br><br>
+        
+        Media : <b id="media"></b>
+</body>
+</html>
+
+<script>
+        function calcular(){
+                var nota1 = Number (document.getElementById("1").value);
+                var nota2 = Number (document.getElementById("nota2").value);
+                // O operador ** foi inserido no js em 2016
+                // Antes a potencia era calculada com Math.pow(numero1,numero2)
+                var potencia = numero1 ** numero2;
+                var raiz1 = Math.sqrt(numero1); 
+                var raiz2 = Math.sqrt(numero2);
+
+    document.getElementById("potencia").innerHTML = potencia; 
+    document.getElementById("raiz1").innerHTML = raiz1; 
+    document.getElementById("raiz2").innerHTML = raiz2; 
+
+                var raiz1arredondada = Math.round (raiz1);
+                var raiz2arredondada = Math.round (raiz2);
+                
+
+                var raiz1truncada = raiz1.toFixed(2);
+                var raiz2truncada = raiz2.toFixed(2);
+
+     document.getElementById("raiz1truncada").innerHTML = raiz1truncada;
+     document.getElementById("raiz2truncada").innerHTML = raiz2truncada;
+     document.getElementById("raiz1arredondada").innerHTML = raiz1arredondada;
+     document.getElementById("raiz2arredondada").innerHTML = raiz2arredondada;
+        }
+
+
+
+
+
+</script>

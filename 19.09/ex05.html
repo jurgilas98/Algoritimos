@@ -1,0 +1,44 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    Altura: <input id="altura"><br>
+    Peso: <input id="peso"><br>
+    <br>
+    <button onclick="fazer()">Verificar Alistamento</button>
+
+    <br><br>
+
+    <div id = "sim" style = "display:none">
+            <b>#militar</b>
+            Com seu peso e altura você <b>PODE</b> se alistar.
+        <span id="nao" style="display:none" >
+                <b>#civil</b>>
+                Com seu peso e altura você<b> NÃO PODE</b> se alistar.
+
+        </span>
+    </div>
+
+</body>
+</html>
+
+<script>
+    function fazer(){
+
+        var altura = Number (document.getElementById("altura").value);
+        var peso = Number (document.getElementById("peso").value);
+
+        if(altura >= 1.65 && peso >= 70){
+
+            document.getElementById("sim").style.display = 'block';
+        } else {
+            document.getElementById("nao").style.display = 'block';
+        }
+
+    }
+</script>

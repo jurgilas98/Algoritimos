@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Alterando o conteúdo da página com JS</title> 
+</head>
+<body>
+
+    <h2>Cadastro de usuário gráfica</h2>
+
+    Seu nome: <span id="nome" style="color: firebrick"></span> <br>
+    Seu e-mail: <span id="email" style="color: blue"></span> <br>
+    Seu idade: <span id="idade" style="color: gray"></span> <br>
+    
+
+    
+</body>
+</html>
+<script>
+    var seu_nome = prompt('Qual seu nome ?');
+    var sua_idade = prompt('Qual seu idade ?');
+    var seu_email = prompt('Qual seu E-mail ?');
+    // alterando o conteúdo de um HTML
+    //Ex. alterar o conteudo de uma tag que tenha o id = "nome"
+    document.getElementById("nome").innerHTML = seu_nome;
+    document.getElementById("email").innerHTML = seu_email;
+    document.getElementById("idade").innerHTML = sua_idade;
+    
+</script>

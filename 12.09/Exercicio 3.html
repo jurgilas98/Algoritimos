@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    Time 1: <input id="time1"> Títulos Mundiais FIFA: <input id="titulos_time_1">
+    Time 2: <input id="time2"> Títulos Mundiais FIFA: <input id="titulos_time_2">
+
+    <br> <br>
+
+    <button onclick = "Comparar()">Comparar Times</button>
+
+    <br> <br> 
+
+    <div id = "exibir_resultado" style="display:none">
+
+    O <u id="exibir_time_melhor"></u> é melhor que o 
+    <u id="exibir_time_pior"></u> porque ele tem
+    <b id="titulos_time_melhor"></b> títulos mundiais contra
+    <b id="titulos_time_pior"></b>
+
+    </div>
+</body>
+</html>
+
+<script>
+
+    function Comparar(){
+        titulos_time_1 = Number(document.getElementById("titulos_time_1").value);
+        titulos_time_2 = Number(document.getElementById("titulos_time_2").value);
+
+        var time_melhor = "";
+        var numero_titulos_melhor = 0;
+
+        var time_pior = "";
+        var numero_titulos_pior = 0;
+        
+
+        if(titulos_time_1 > titulos_time_2){
+
+            time_melhor = document.getElementById("time1").value;
+            time_pior = document.getElementById("time2").value;
+            numero_titulos_melhor = document.getElementById("titulos_time_1").value;
+            numero_titulos_pior = document.getElementById("titulos_time_2").value;
+
+        }
+
+        else{
+
+            time_melhor = document.getElementById("time2").value;
+            time_pior = document.getElementById("time1").value;
+            numero_titulos_melhor = document.getElementById("titulos_time_2").value;
+            numero_titulos_pior = document.getElementById("titulos_time_1").value;
+
+        }
+
+        document.getElementById("exibir_time_melhor").innerHTML = time_melhor;
+        document.getElementById("exibir_time_pior").innerHTML = time_pior;
+        document.getElementById("titulos_time_melhor").innerHTML = numero_titulos_melhor;
+        document.getElementById("titulos_time_pior").innerHTML = numero_titulos_pior;
+
+        document.getElementById("exibir_resultado").style.display = 'block';
+
+    }
+</script>

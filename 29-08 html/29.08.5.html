@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<h3>Pergunta</h3> <input id = "pergunta"><br>
+a-)<input id = "a"><br>
+b-)<input id = "b"><br>
+c-)<input id = "c"><br>
+d-)<input id = "d"><br><br><br>
+<button onclick="gerar()">Gerar Questão</button><br><br><br>
+
+
+<b id = "pergunta1"></b><br>
+<b id = "a1"></b><br>
+<b id = "b1"></b><br>
+<b id = "c1"></b><br>
+<b id = "d1"></b><br>
+=</body>
+</html>
+<script>
+        function gerar () {
+            var pergunta = document.getElementById("pergunta").value;
+            var a = document.getElementById("a").value;
+            var b = document.getElementById("b").value;
+            var c = document.getElementById("c").value;
+            var d = document.getElementById("d").value;
+
+            document.getElementById("pergunta1").innerHTML = pergunta;
+            document.getElementById("a1").innerHTML = a;
+            document.getElementById("b1").innerHTML = b;
+            document.getElementById("c1").innerHTML = c;
+            document.getElementById("d1").innerHTML = d;
+        }
+
+
+</script>

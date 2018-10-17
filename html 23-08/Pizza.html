@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Criador de pizzas</title>
+</head>
+<body>
+
+    <h2>Sabor criado:</h2><u><span id = "sabor" style="color: rgb(167, 23, 143)"></span></u> <br>
+<ul style="color: firebrick">
+        <li></li><span id = "ingr1" style="color:firebrick"></span>
+        <li></li><span id = "ingr2" style="color: firebrick"></span>
+        <li></li><span id = "ingr3" style="color: firebrick"></span>
+
+
+</ul>
+    
+</body>
+</html>
+
+<script>
+ var sab = prompt("Qual o nome do sabor da pizza ?") 
+ var item1 = prompt("Qual o 1º ingrediente?");
+ var item2 = prompt("Qual o 2º ingrediente?");
+ var item3 = prompt("Qual o 3º ingrediente?");
+
+ document.getElementById("sabor").innerHTML = sab;
+ document.getElementById("ingr1").innerHTML = item1;
+ document.getElementById("ingr2").innerHTML = item2;
+ document.getElementById("ingr3").innerHTML = item3;
+
+
+
+
+</script>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Temperatura</title>
+</head>
+<body>
+    Informe a temperatura <input id="temp"> <br><br>
+    <button onclick="verificar()">Verificar Temperatura</button>
+</body>
+</html>
+<script>
+
+function verificar(){
+    var temp1 = Number (document.getElementById("temp").value);
+if (temp1 < 20 || temp1 > 25) {
+    alert ("Atenção! Temperatura "+temp1+"°C é desconfortável!");
+} 
+
+}
+
+
+</script>

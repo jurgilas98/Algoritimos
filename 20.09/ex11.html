@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Será que vamos viajar?</title>
+</head>
+<body>
+    Quantos kilometros? <input id="km"><br><br>
+    Qual o valor do pedagio? <input id="pedagio"><br><br>
+    Quantos pedagios? <input id="npedagio"><br><br>
+    <button onclick="calcular()">Calcular custo da viagem</button><br><br>
+    
+
+    <div id="resultado" style="display: none">
+<h2>Viagem loka</h2>
+Gasto com gasolina = <b>R$</b><b id="gasolina"></b><br><br>
+<span id="ok" style="display: none"> Gasto com pedágios = <b>R$</b><b id="totalpedagios"></b><br><br></span>
+Gasto Total = <b>R$</b><b id="total"></b><br><br>
+
+    </div>
+    
+</body>
+</html>
+
+<script>
+    function calcular() {
+        var km = Number (document.getElementById("km").value);
+        var pedagio = Number (document.getElementById("pedagio").value);
+        var npedagio = Number (document.getElementById("npedagio").value);
+       var gasolina = (km/15)*4;
+       var totalpedagios = (npedagio * pedagio);
+       var total = (gasolina + pedagio);
+
+       document.getElementById("gasolina").innerHTML = gasolina.toFixed(2);
+       document.getElementById("total").innerHTML = total.toFixed(2);
+       document.getElementById("totalpedagios").innerHTML = totalpedagios.toFixed(2);
+       document.getElementById("resultado").style.display = 'block';
+       document.getElementById("ok").style.display = "block";
+       
+
+       if (pedagio == "") {
+
+    document.getElementById("ok").style.display = "none";
+       }
+    }
+
+
+
+
+
+</script>

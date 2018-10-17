@@ -1,0 +1,42 @@
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pizza</title>
+</head>
+<body>
+<h2>Pede pizza??</h2>
+Valor da pizza: <input id="pizza"><br><br>
+Tempo de entrega: <input id="tempo"><br><br>
+
+<button onclick="analisar()">Analisar Pizza</button>
+
+<div id = "sim" style = "display:none">
+        <b>#PedePizza</b>
+        Essa pizza você <b>PODE</b> pedir.
+    <span id="nao" style="display:none" >
+            <b>#TentaOutra</b>
+         Essa pizza você <b>NÃO PODE</b> pedir.
+
+    </span>
+</div>
+    
+</body>
+</html>
+<script>
+function analisar() {
+    var pizza = Number (document.getElementById("pizza").value);
+    var tempo = Number (document.getElementById("tempo").value);
+
+    if (pizza <= 50 && tempo <= 35) {
+        document.getElementById("sim").style.display = 'block';
+        document.getElementById("nao").style.display = 'none';
+    } else {
+        document.getElementById("sim").style.display = 'none';
+        document.getElementById("nao").style.display = 'block';
+    }
+}
+
+
+</script>
