@@ -1,14 +1,10 @@
 <meta charset="UTF-8">
 <script>
 var amigos = Number(prompt('Quantos amigos?'));
-var tempo = Number(prompt('Qual o tempo de entrega '));
+var tempo = Number(prompt('Qual o tempo de entrega ? (em minutos)'));
 var valor = Number(prompt('Qual o valor da pizza?'));
-var pede = pedePizza(amigos,valor,tempo);
 function pedePizza(amigos,valor,tempo){
-  var precoOk = (valor / amigos) <= 25;
-  var tempoOk = tempo <= 45;
-  var pedi = (precoOk && tempoOk)? true : false;
-  return pedi;
+  return (valor / amigos <= 25 && tempo <= 45);
 }
-pede?alert('Aí sim #pedirpizza!'):alert('Xi... #deuruim');
+alert(pedePizza(amigos,valor,tempo)?'Aí sim #pedirpizza!':'Xi... #deuruim');
 </script>

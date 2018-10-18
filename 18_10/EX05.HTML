@@ -1,0 +1,20 @@
+<meta charset="UTF-8">
+<script>
+var balas = (prompt('Quantas balas ?'));
+var contador = 0;
+if(balas <=0 ){
+    choro = 10;
+}
+ else if (balas >= 1 && balas <=3 ){
+    choro=7;
+}
+else if (balas >= 4 && balas <=6 ){
+    choro=3;
+}else {
+    choro = 0;
+}
+while (contador < choro){
+    document.write(`Bua <br>`);
+    contador ++;
+}
+</script>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ex04</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+var frase1 = 'Só o amor constroi';
+var frase2 = 'Só o amor destroi';
+var contador = 0; 
+
+document.write('<ul>');
+
+while (contador < 10){
+    var li = `<li id = ${contador} ></li>`;
+    document.write(`${li}`);
+    document.getElementById(`${contador}`).innerHTML = frase1;
+    contador++;
+}
+while (contador < 17){
+    var li = `<li id = ${contador} ></li>`;
+    document.write(`${li}`);
+    document.getElementById(`${contador}`).innerHTML = frase2;
+    contador++;
+}
+
+document.write('<ul/>');
+
+
+</script>
