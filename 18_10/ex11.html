@@ -1,0 +1,21 @@
+<meta charset="UTF-8">
+    <script>
+        var maior = 0;
+        var menor = 0;
+        var contador = 0;
+        while (contador < 7 ){
+            var numero = Number (prompt('Qual seu numero? '));
+            var eh_maior = numero > maior;
+            var eh_menor = numero < menor;
+           if (eh_maior){
+              var maior = numero;
+
+           } if (contador ==0){
+                var menor = numero;
+            } else if (eh_menor){
+              var menor = numero;
+           }
+           contador ++;
+        }
+    alert (`Dos 7 numeros digitados o maior foi ${maior} e o menor foi ${menor}`);   
+    </script>

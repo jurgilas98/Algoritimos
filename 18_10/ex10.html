@@ -1,0 +1,36 @@
+<meta charset="UTF-8">
+    <script>
+        var eleitores = Number (prompt('Quantos eleitores ?'));
+        var num_cand1 = prompt('Qual o numero do 1º candidato? ');
+        var cand1 = prompt('Qual o nome do 1º candidato');
+        var num_cand2 = prompt('Qual o numero do 2º candidato? ');
+        var cand2 = prompt('Qual o nome do 2º candidato');
+        var contador = 0;
+        var contador_cand1 = 0;
+        var contador_cand2 = 0;
+        while (contador < eleitores){
+            var voto = prompt(`Seu voto? ${num_cand1} - ${cand1}  /  ${num_cand2} - ${cand2}  / NDA - Nulo`);
+            if (voto == num_cand1){
+                contador_cand1 ++;
+            } else if (voto == num_cand2){
+                contador_cand2 ++;
+            }
+            contador++
+        }
+        var empate = contador_cand1 == contador_cand2;
+        var vencedor = contador_cand1 > contador_cand2;
+        if (empate){
+            alert (`Empate. #partiunovaeleição`);
+        }else if (vencedor){
+            alert (`Candidato ${cand1} venceu!`);
+        }else if (!vencedor) {
+            alert (`Candidato ${cand2} venceu!`);
+        }
+    
+    
+    
+    
+    
+    
+    
+    </script>
