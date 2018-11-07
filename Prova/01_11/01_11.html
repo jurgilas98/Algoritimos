@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    Quantos Produtos ?
+    <input id="produtos"><br>
+    <button onclick= "registrar()">Cadastrar Produtos</button>
+    <button onclick="mostrar()" id="botao" style="display: none">Gerar Relatório</button>
+    <div id="resultado" style="display: none;">
+            Produtos cadastrados: <b id="prod_cad" ></b><br>
+
+            Total de itens no estoque: <b id="total_prod"></b> <br><!-- soma das quantidades de todos os produtos -->
+            
+            Valor total do estoque: <b>R$</b><b id="vlr_total"></b><br> <!-- soma dos valores unitários x quantidades de todos os produtos -->
+            
+            Produto mais barato: <b id="barato"></b> - <b>R$</b><b id="vlr_barato"></b> por <b id="U_barato"></b> <br>           
+            Produto mais caro: <b id="caro"></b> - <b>R$</b><b id="vlr_caro"></b> por <b id="U_caro"></b><br>
+    </div>
+</body>
+</html>
+<script>
+function registrar() {
+var produtos = Number (document.getElementById("produtos").value)
+var vlr_caro;
+   var vlr_barato ;
+   var total_prod = 0;
+   var vlr_total = 0;
+   var U_barato;
+   var U_caro;   
+   var caro;
+   var barato;
+   var vlr_total;
+   
+for  (contador=0 ; contador < produtos; contador ++){
+   var nome = nome_x();    
+   var vlr_n = vlr_n1();
+   var unidade = unidade1();
+   var estoque = estoque1();
+   var vlr_registro = vlr_n * estoque;
+   var eh_maior = vlr_n > vlr_caro;
+   var eh_menor = vlr_n < vlr_barato;
+   vlr_total += vlr_registro;
+   total_prod += estoque;
+     if (contador == 0 ){
+       var vlr_barato = vlr_n;
+       var vlr_caro = vlr_n;
+       var U_barato = unidade;
+       var U_caro = unidade;
+       var caro = nome;
+       var barato = nome;
+   }
+        else if (eh_maior) {        
+            var vlr_caro = vlr_n;       
+            var U_caro = unidade;
+            var caro = nome;
+        
+        }else if (eh_menor){
+            var vlr_barato = vlr_n;       
+            var U_barato = unidade;
+            var barato = nome;
+           }
+
+gerar(produtos,total_prod,vlr_total,caro,barato,vlr_barato,vlr_caro,U_caro,U_barato);
+   
+}
+
+document.getElementById("botao").style.display='block';
+
+function nome_x(){
+do{
+    var nome_x = prompt(`Nome do Xº produto`);
+} while(nome_x.length < 2)
+return nome_x;
+
+}
+function vlr_n1(){
+    do{
+    var vlr_n = Number (prompt(`Valor unitário de N`)) ;
+} while(vlr_n <= 0)
+return vlr_n;
+}
+function unidade1(){
+    do{
+    var unidade = prompt(`Unidade de venda (Kg, Und, Litros etc) de N`);
+} while(unidade.length < 1)
+return unidade;
+}
+function estoque1(){
+ do{
+    var estoque = Number (prompt(`Quantos U em estoque de N`));
+} while(estoque <= 0)
+return estoque;
+}
+}
+function gerar(produtos,total_prod,vlr_total,caro,barato,vlr_barato,vlr_caro,U_caro,U_barato){
+    document.getElementById("resultado").style.display = 'none';
+    document.getElementById("prod_cad").innerHTML = produtos;
+    document.getElementById("total_prod").innerHTML = total_prod;
+    document.getElementById("vlr_total").innerHTML = vlr_total;
+    document.getElementById("caro").innerHTML = caro;
+    document.getElementById("barato").innerHTML = barato;
+    document.getElementById("vlr_barato").innerHTML = vlr_barato;
+    document.getElementById("vlr_caro").innerHTML = vlr_caro;
+    document.getElementById("U_caro").innerHTML = U_caro;
+    document.getElementById("U_barato").innerHTML = U_barato;
+
+
+
+}
+function mostrar(){
+    document.getElementById("resultado").style.display = 'block';
+}
+</script>
