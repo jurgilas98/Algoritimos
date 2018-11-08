@@ -1,0 +1,17 @@
+<meta charset="UTF-8">
+<script>
+    //criando vetor vazio
+    var notas = [];
+
+    for (n=0; n<5 ; n++){
+
+        var novaNota = prompt (`Digite sua ${n+1}ª nota`);
+        //inclui elemento no vetor (ultima posição)
+        notas.push(novaNota);
+    }
+    var rever = Number (prompt(`Qual nota quer rever ?`));
+//recuperando um elemento do vetor 
+    var notaRecuperada = notas[rever-1];
+// rever -1 apenas para a seleção comece no numero 1 
+    document.write(`Nota: ${notaRecuperada}`);
+</script>
