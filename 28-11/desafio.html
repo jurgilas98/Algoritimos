@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Validar CPF</title>
+</head>
+<body>
+    <h2>Valide o CPF</h2><br><br>
+    <input type="text" id='cpf'><br><br>
+    <button onclick="validar()">Validar CPF </button>
+</body>
+</html>
+<script>
+    function validar (){
+        var cpf = document.getElementById('cpf').value;
+        var resultado = 0;
+        var resultado1 = 0;
+
+        if(cpf.length == 11){
+            for(contador0 = 10 , contador1 = 0; contador0 >= 2 ; contador0 --, contador1++){
+                resultado += cpf[contador1] * contador0;
+            }
+            for(contador0 = 11 , contador1 = 0; contador0 >= 2 ; contador0 --, contador1++){
+                resultado1 += cpf[contador1] * contador0;
+            }
+        resultado *= 10;
+        resultado1 *= 10; 
+        var sobra = resultado % 11;
+        var sobra1 = resultado1 % 11;
+        if (sobra == 10){
+            sobra = 0;
+        }
+        if (sobra1 == 10){
+            sobra1 = 0;
+        }
+        var sobraOk = sobra == cpf[9];
+        var sobraOk2 = sobra1 == cpf[10];
+        if (!sobraOk || !sobraOk2){
+            alert ('CPF invalido');
+        } else {
+            alert('CPF válido');
+        }
+        }else {
+            alert ('CPF invalido');
+        }
+    }
+</script>
